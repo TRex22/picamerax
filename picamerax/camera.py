@@ -2365,9 +2365,9 @@ class PiCamera(object):
     def _set_framerate(self, value):
         self._check_camera_open()
         self._check_recording_stopped()
+        if not (0 < value <= self.MAX_FRAMERATE):
+            raise PiCameraValueError("Invalid framerate: %.2ffps" % value)
         value = mo.to_fraction(value, den_limit=256)
-        # if not (0 < value <= self.MAX_FRAMERATE):
-        #     raise PiCameraValueError("Invalid framerate: %.2ffps" % value)
         config = self._get_config()
         self._disable_camera()
         self._configure_camera(config, config._replace(framerate=value))
