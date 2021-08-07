@@ -44,7 +44,7 @@ Links
 
 
 .. _Raspberry Pi: https://www.raspberrypi.org/
-.. _camera: https://www.raspberrypi.org/learning/getting-started-with-picamerax/
+.. _camera: https://www.raspberrypi.org/learning/getting-started-with-picamera/
 .. _PyPI: https://pypi.python.org/pypi/picamerax/
 .. _documentation: https://picamerax.readthedocs.io/
 .. _source code: https://github.com/waveform80/picamerax
