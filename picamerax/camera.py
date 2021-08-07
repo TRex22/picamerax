@@ -2366,8 +2366,8 @@ class PiCamera(object):
         self._check_camera_open()
         self._check_recording_stopped()
         value = mo.to_fraction(value, den_limit=256)
-        if not (0 < value <= self.MAX_FRAMERATE):
-            raise PiCameraValueError("Invalid framerate: %.2ffps" % value)
+        # if not (0 < value <= self.MAX_FRAMERATE):
+        #     raise PiCameraValueError("Invalid framerate: %.2ffps" % value)
         config = self._get_config()
         self._disable_camera()
         self._configure_camera(config, config._replace(framerate=value))
@@ -4345,4 +4345,3 @@ class PiCamera(object):
             In prior versions this was a bool value with ``True`` representing
             a black background.
         """)
-
